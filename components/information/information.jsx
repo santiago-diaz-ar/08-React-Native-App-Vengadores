@@ -2,7 +2,7 @@ import { Text, View } from "react-native";
 const Information = () => {
   return (
     <View>
-      <Text>Information en Desarrollo</Text>
+      <Text>Desarrollo</Text>
     </View>
   );
 };

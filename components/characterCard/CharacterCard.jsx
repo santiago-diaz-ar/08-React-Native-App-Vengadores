@@ -1,7 +1,7 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-const CharacterCard = ({ image, name }) => {
+const CharacterCard = ({ name, image }) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity

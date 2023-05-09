@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/Ionicons";
 import Information from "../information/information";
-import Comics from "../comics/comics";
+import Comics from "../commics/Commics.jsx";
 
 const Tab = createBottomTabNavigator();
 

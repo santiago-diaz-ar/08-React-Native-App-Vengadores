@@ -1,18 +1,12 @@
-import { View, Text, Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { TouchableOpacity, Image, Text } from "react-native";
 
-const CharacterCard = ({ name, image }) => {
+export default function CharacterCard({ image, name }) {
   const navigation = useNavigation();
   return (
-    <TouchableOpacity
-      onPress={() => {
-        navigation.navigate("Detail");
-      }}
-    >
-      <Text>Character en desarrollo</Text>
-      <Text>{name}</Text>
+    <TouchableOpacity onPress={() => navigation.navigate("Detail")} >
       <Image source={image} />
+      <Text>{name}</Text>
     </TouchableOpacity>
   );
-};
-export default CharacterCard;
+}

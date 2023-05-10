@@ -1,9 +1,12 @@
-import { Text, View } from "react-native";
-const Information = () => {
+import { View, Image, Text } from "react-native";
+
+export default function Information({ image, name, description }) {
   return (
     <View>
-      <Text>Desarrollo</Text>
+      <Text>Information en Desarrollo</Text>
+      <Image source={{ uri: image }} />
+      <Text>{name}</Text>
+      <Text>{description}</Text>
     </View>
   );
-};
-export default Information;
+}

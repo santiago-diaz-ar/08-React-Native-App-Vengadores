@@ -5,7 +5,7 @@ import Comics from "../commics/Commics.jsx";
 
 const Tab = createBottomTabNavigator();
 
-const Detail = () => {
+const Detail = ({route}) => {
   return (
     <Tab.Navigator
       initialRouteName="Information"

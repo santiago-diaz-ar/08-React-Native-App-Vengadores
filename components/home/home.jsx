@@ -10,6 +10,8 @@ export default function Home() {
   const [data, setData] = useState([]);
   const { ts, apikey, hash, baseURL } = apiParams;
 
+  const prueba = [];
+
   useEffect(() => {
     axios
       .get(`${baseURL}/v1/public/characters`, {
@@ -19,10 +21,11 @@ export default function Home() {
           hash,
         },
       })
-      .then((response) => setData(response.data.data.results))
+      .then((response) => setData(response?.data?.data?.results))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false));
   }, []);
+
   return (
     <View>
       {isLoading ? (
@@ -33,8 +36,9 @@ export default function Home() {
           keyExtractor={({ id }) => id.toString()}
           renderItem={({ item }) => (
             <CharacterCard
-              image={`${item?.thumbnail?.path}.${item?.thumbnail.extension}`}
-              name={item.name}
+              id={item?.id}
+              name={item?.name}
+              image={`${item?.thumbnail?.path}.${item?.thumbnail?.extension}`}
             />
           )}
         />

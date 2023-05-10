@@ -8,7 +8,6 @@ const Commics = ({ listComics }) => {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const { ts, apikey, hash, baseURL } = apiParams;
-  console.log(listComics);
 
   useEffect(() => {
     const promisesArray = listComics.map((c) =>

@@ -10,8 +10,6 @@ export default function Home() {
   const [data, setData] = useState([]);
   const { ts, apikey, hash, baseURL } = apiParams;
 
-  const prueba = [];
-
   useEffect(() => {
     axios
       .get(`${baseURL}/v1/public/characters`, {
@@ -39,6 +37,7 @@ export default function Home() {
               id={item?.id}
               name={item?.name}
               image={`${item?.thumbnail?.path}.${item?.thumbnail?.extension}`}
+              description={item.description}
             />
           )}
         />

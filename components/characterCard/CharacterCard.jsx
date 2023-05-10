@@ -1,12 +1,23 @@
 import { useNavigation } from "@react-navigation/native";
-import { TouchableOpacity, Image, Text, StyleSheet } from "react-native";
+import { TouchableOpacity, Image, Text, StyleSheet, View } from "react-native";
 
-export default function CharacterCard({ image, name, id }) {
+export default function CharacterCard({ image, name, id, description }) {
   const navigation = useNavigation();
   return (
-    <TouchableOpacity onPress={() => navigation.navigate("Detail")}>
-      <Image source={image} />
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text>{name}</Text>
-    </TouchableOpacity>
+      <Image resizeMode="cover" source={image} />
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate("Detail", {
+            id: id,
+            image: image,
+            description: description,
+          })
+        }
+      >
+        <Text>{description}</Text>
+      </TouchableOpacity>
+    </View>
   );
 }

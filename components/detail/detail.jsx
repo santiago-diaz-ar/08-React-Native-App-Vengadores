@@ -1,10 +1,11 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/Ionicons";
 import Information from "../information/information";
-import Comics from "../commics/Commics.jsx";
+import Comics from "../comics/Commics.jsx";
 import axios from "axios";
 import apiParams from "../../config";
 import { useState, useEffect } from "react";
+import { ActivityIndicator } from "react-native";
 
 const Tab = createBottomTabNavigator();
 
@@ -26,6 +27,7 @@ const Detail = ({ route }) => {
       .catch((error) => console.error(error))
       .finally(() => setLoading(false));
   }, []);
+
   return (
     <Tab.Navigator
       initialRouteName="Information"
@@ -56,13 +58,20 @@ const Detail = ({ route }) => {
       </Tab.Screen>
       <Tab.Screen
         name="Comics"
-        component={Comics}
         options={{
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="book" color={color} size={size} />
           ),
         }}
-      />
+      >
+        {() =>
+          isLoading ? (
+            <ActivityIndicator size="large" color="#00ff00" />
+          ) : (
+            <Comics listComics={data?.comics?.items} />
+          )
+        }
+      </Tab.Screen>
     </Tab.Navigator>
   );
 };

@@ -6,7 +6,11 @@ export default function CharacterCard({ image, name, id, description }) {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text>{name}</Text>
-      <Image resizeMode="cover" source={image} />
+      <Image
+      /*   source={image}
+        style={{ width: 100, height: 100 }} */
+        /* resizeMode="container" */
+      />
       <TouchableOpacity
         onPress={() =>
           navigation.navigate("Detail", {

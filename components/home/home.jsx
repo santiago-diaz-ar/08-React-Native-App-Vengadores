@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, ActivityIndicator, FlatList, ScrollView } from "react-native";
+import { View, ActivityIndicator, FlatList } from "react-native";
 import CharacterCard from "../characterCard/CharacterCard";
 import { useState, useEffect } from "react";
 import apiParams from "../../config";

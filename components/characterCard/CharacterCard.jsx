@@ -5,6 +5,7 @@ export default function CharacterCard({ image, name, id, description }) {
   const navigation = useNavigation();
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>{name}</Text>
       <TouchableOpacity
         onPress={() =>
           navigation.navigate("Detail", {
@@ -14,13 +15,12 @@ export default function CharacterCard({ image, name, id, description }) {
           })
         }
       >
-        <Text>{name}</Text>
+        <Image
+          source={image}
+          style={{ width: 100, height: 100, backgroundColor: "red" }}
+        />
       </TouchableOpacity>
       <Text>{description}</Text>
-      <Image
-        source={image}
-        style={{ width: 100, height: 100, backgroundColor: "red" }}
-      />
     </View>
   );
 }

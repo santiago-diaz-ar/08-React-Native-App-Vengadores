@@ -59,6 +59,7 @@ export default function Home() {
             value={search}
             onIconPress={searchCharacter}
             onSubmitEditing={searchCharacter}
+            style={{ margin: 10 }}
           />
           <FlatList
             data={data}

@@ -4,8 +4,29 @@ import { TouchableOpacity, Image, Text, StyleSheet, View } from "react-native";
 export default function CharacterCard({ image, name, id, description }) {
   const navigation = useNavigation();
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>{name}</Text>
+    <View
+      style={{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        borderColor: "grey",
+        borderWidth: 1,
+        borderRadius: 10,
+        margin: 10,
+      }}
+    >
+      <Text
+        style={{
+          backgroundColor: "blue",
+          color: "white",
+          width: "100%",
+          textAlign: "center",
+          borderRadius: 10,
+          marginBottom: 10,
+        }}
+      >
+        {name}
+      </Text>
       <TouchableOpacity
         onPress={() =>
           navigation.navigate("Detail", {
@@ -15,12 +36,19 @@ export default function CharacterCard({ image, name, id, description }) {
           })
         }
       >
-        <Image
-          source={image}
-          style={{ width: 100, height: 100, backgroundColor: "red" }}
-        />
+        <View style={{ width: 150, height: 200 }}>
+          <Image
+            source={{ uri: image }}
+            style={{
+              width: "100%",
+              height: "100%",
+              backgroundColor: "red",
+              borderRadius: 10,
+            }}
+          />
+        </View>
       </TouchableOpacity>
-      <Text>{description}</Text>
+      <Text style={{ margin: 10 }}>{description}</Text>
     </View>
   );
 }

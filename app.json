@@ -11,9 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -30,7 +28,9 @@
     "extra": {
       "eas": {
         "projectId": "71f8a2fd-8ba3-4ae9-a30d-79b1653da92c"
-      }
+      },
+      "publicKey": "edf005b07c965101f3ac2b87035d1f86",
+      "privateKey": "bb74cf3724358efad91c48bc61a8e7c8296f9dba"
     }
   }
 }

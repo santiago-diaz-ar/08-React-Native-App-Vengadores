@@ -48,7 +48,7 @@ export default function CharacterCard({ image, name, id, description }) {
           />
         </View>
       </TouchableOpacity>
-      <Text style={{ margin: 10 }}>{description}</Text>
+ 
     </View>
   );
 }

@@ -20,7 +20,6 @@ export default function CharacterCard({ image, name, id, description }) {
         borderWidth: 1,
         borderRadius: 10,
         margin: 10,
-       
       }}
     >
       <Text

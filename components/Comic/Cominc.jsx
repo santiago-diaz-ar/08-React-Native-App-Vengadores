@@ -8,23 +8,20 @@ const Comic = ({ name, image }) => {
           alignItems: "center",
           justifyContent: "center",
           margin: 10,
-          borderColor: "red",
           borderWidth: 1,
           borderRadius: 10,
         }}
       >
-        <View style={{ margin: 20, alignItems: "center" }}>
-          <Text>{name}</Text>
-          <View style={{ width: 150, height: 150 }}>
-            <Image
-              source={{ uri: image }}
-              style={{
-                width: "100%",
-                height: "100%",
-                resizeMode: "contain",
-              }}
-            />
-          </View>
+        <Text>{name}</Text>
+        <View style={{ width: 150, height: 150 }}>
+          <Image
+            source={{ uri: image }}
+            style={{
+              width: "100%",
+              height: "100%",
+              resizeMode: "contain",
+            }}
+          />
         </View>
       </View>
     </ScrollView>

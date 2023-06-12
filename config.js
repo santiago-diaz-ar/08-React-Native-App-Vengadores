@@ -1,6 +1,5 @@
 import md5 from "md5";
-// Toma los valores de la clave pública y provada desde el archivo .env
-/* import { publicKey, privateKey } from "@env"; */
+
 import Constants from "expo-constants";
 
 const publicKey = Constants.manifest.extra.publicKey;

@@ -1,19 +1,16 @@
 import { View, Image, Text } from "react-native";
 
 export default function Information({ id, image, description }) {
-  console.log(description);
   return (
     <View
       style={{
-        borderColor: "blue",
-        borderRadius: 10,
-        borderWidth: 2,
+
         margin: 5,
         alignItems: "center",
       }}
     >
       <Text style={{ marginBottom: 10 }}>id: {id}</Text>
-      <View style={{ width: 150, height: 200 }}>
+      <View style={{ width: 330, height: 420 }}>
         <Image
           source={{ uri: image }}
           style={{

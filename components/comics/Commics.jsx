@@ -1,4 +1,4 @@
-import { View, Text, ActivityIndicator } from "react-native";
+import { View, Text, ActivityIndicator, ScrollView } from "react-native";
 import Comic from "../Comic/Cominc";
 import apiParams from "../../config";
 import axios from "axios";
@@ -29,7 +29,7 @@ const Commics = ({ listComics }) => {
   }, []);
 
   return (
-    <View>
+    <ScrollView>
       {isLoading ? (
         <ActivityIndicator size="large" color="#00ff00" />
       ) : (
@@ -41,7 +41,7 @@ const Commics = ({ listComics }) => {
           />
         ))
       )}
-    </View>
+    </ScrollView>
   );
 };
 export default Commics;

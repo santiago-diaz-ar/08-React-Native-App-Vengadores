@@ -17,12 +17,12 @@ export default function CharacterCard({ image, name, id, description }) {
     >
       <Text
         style={{
-          backgroundColor: "blue",
-          color: "white",
+          color: "black",
           width: "100%",
           textAlign: "center",
           borderRadius: 10,
           marginBottom: 10,
+          fontWeight: "bold",
         }}
       >
         {name}
@@ -36,7 +36,7 @@ export default function CharacterCard({ image, name, id, description }) {
           })
         }
       >
-        <View style={{ width: 150, height: 200 }}>
+        <View style={{ width: 320, height: 200 }}>
           <Image
             source={{ uri: image }}
             style={{

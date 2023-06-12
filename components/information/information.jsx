@@ -1,11 +1,10 @@
 import { View, Image, Text, ScrollView } from "react-native";
 
 export default function Information({ id, image, description }) {
-  console.log(description.length);
   return (
     <ScrollView>
       <View style={{ alignItems: "center" }}>
-        <View style={{ width: "100%", height: 400 }}>
+        <View style={{ width: 330, height: 400 }}>
           <Image
             source={{ uri: image }}
             style={{
@@ -14,6 +13,7 @@ export default function Information({ id, image, description }) {
               borderRadius: 10,
               marginBottom: 10,
             }}
+            resizeMode="stretch"
           />
         </View>
         {description.length == 0 ? (

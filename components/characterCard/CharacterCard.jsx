@@ -45,10 +45,10 @@ export default function CharacterCard({ image, name, id, description }) {
               backgroundColor: "red",
               borderRadius: 10,
             }}
+            resizeMode="stretch"
           />
         </View>
       </TouchableOpacity>
- 
     </View>
   );
 }

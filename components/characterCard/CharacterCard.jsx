@@ -1,5 +1,12 @@
 import { useNavigation } from "@react-navigation/native";
-import { TouchableOpacity, Image, Text, StyleSheet, View } from "react-native";
+import {
+  TouchableOpacity,
+  Image,
+  Text,
+  StyleSheet,
+  View,
+  ScrollView,
+} from "react-native";
 
 export default function CharacterCard({ image, name, id, description }) {
   const navigation = useNavigation();
@@ -13,6 +20,7 @@ export default function CharacterCard({ image, name, id, description }) {
         borderWidth: 1,
         borderRadius: 10,
         margin: 10,
+       
       }}
     >
       <Text
@@ -22,6 +30,7 @@ export default function CharacterCard({ image, name, id, description }) {
           textAlign: "center",
           borderRadius: 10,
           marginBottom: 10,
+          marginTop: 5,
           fontWeight: "bold",
         }}
       >
@@ -36,7 +45,7 @@ export default function CharacterCard({ image, name, id, description }) {
           })
         }
       >
-        <View style={{ width: 320, height: 200 }}>
+        <View style={{ width: 320, height: 250, marginBottom: 10 }}>
           <Image
             source={{ uri: image }}
             style={{

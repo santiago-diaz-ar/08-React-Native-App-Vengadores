@@ -8,14 +8,31 @@ const Comic = ({ name, image }) => {
           flex: 1,
           alignItems: "center",
           justifyContent: "center",
-          borderColor: "grey",
+          borderColor: "gre",
           borderWidth: 1,
           borderRadius: 10,
           margin: 10,
         }}
       >
-        <Text>{name}</Text>
-        <View style={{ width: 250, height: 200, borderRadius: 10 }}>
+        <Text
+          style={{
+            marginTop: 5,
+            textAlign: "center",
+            color: "black",
+            fontWeight: "bold",
+          }}
+        >
+          {name}
+        </Text>
+        <View
+          style={{
+            width: 300,
+            height: 300,
+            borderRadius: 10,
+            marginTop: 10,
+            marginBottom: 10,
+          }}
+        >
           <Image
             source={{ uri: image }}
             style={{

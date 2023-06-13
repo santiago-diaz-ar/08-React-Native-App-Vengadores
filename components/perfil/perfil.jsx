@@ -11,13 +11,13 @@ const Perfil = () => {
           marginBottom: 20,
         }}
       >
-        Javier Santiago Diaz Arcila
+        Javier Santiago Diaz Arcila full stack
       </Text>
       <Image
         source={require("../img/1.jpg")}
         style={{
-          width: 340,
-          height: 400,
+          width: 240,
+          height: 250,
           alignSelf: "center",
           borderRadius: 500,
           marginBottom: 25,

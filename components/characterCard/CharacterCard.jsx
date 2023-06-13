@@ -18,7 +18,7 @@ export default function CharacterCard({ image, name, id, description }) {
         justifyContent: "center",
         borderColor: "grey",
         borderWidth: 1,
-        borderRadius: 10,
+        borderRadius: 400,
         margin: 10,
       }}
     >
@@ -44,14 +44,16 @@ export default function CharacterCard({ image, name, id, description }) {
           })
         }
       >
-        <View style={{ width: 320, height: 250, marginBottom: 10 }}>
+        <View style={{ width: 300, height: 300, marginBottom: 10 }}>
           <Image
             source={{ uri: image }}
             style={{
               width: "100%",
               height: "100%",
-              backgroundColor: "red",
-              borderRadius: 10,
+              backgroundColor: "black",
+              borderRadius: 300,
+              borderColor: "grey",
+              borderWidth: 1,
             }}
             resizeMode="stretch"
           />

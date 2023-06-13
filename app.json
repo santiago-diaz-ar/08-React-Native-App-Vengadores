@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "MarvelApp2.0",
-    "slug": "MarvelApp2.0",
+    "name": "MarvelApp",
+    "slug": "MarvelApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/tres.png",

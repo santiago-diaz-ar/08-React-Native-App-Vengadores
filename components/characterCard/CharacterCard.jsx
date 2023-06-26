@@ -18,7 +18,6 @@ export default function CharacterCard({ image, name, id, description }) {
         justifyContent: "center",
         borderColor: "grey",
         borderWidth: 1,
-        borderRadius: 400,
         margin: 10,
       }}
     >
@@ -27,9 +26,7 @@ export default function CharacterCard({ image, name, id, description }) {
           color: "black",
           width: "100%",
           textAlign: "center",
-          borderRadius: 10,
-          marginBottom: 10,
-          marginTop: 5,
+          borderRadius: 40,
           fontWeight: "bold",
         }}
       >
@@ -51,7 +48,7 @@ export default function CharacterCard({ image, name, id, description }) {
               width: "100%",
               height: "100%",
               backgroundColor: "black",
-              borderRadius: 300,
+              borderRadius: 40,
               borderColor: "grey",
               borderWidth: 1,
             }}

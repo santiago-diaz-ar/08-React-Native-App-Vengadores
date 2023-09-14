@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "MarvelApp",
-    "slug": "MarvelApp",
+    "slug": "app-nativa-marvel",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/tres.png",
@@ -11,7 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -27,10 +29,11 @@
     },
     "extra": {
       "eas": {
-        "projectId": "71f8a2fd-8ba3-4ae9-a30d-79b1653da92c"
+        "projectId": "715ab835-5a79-48bc-be36-fecc657d893f"
       },
       "publicKey": "edf005b07c965101f3ac2b87035d1f86",
       "privateKey": "bb74cf3724358efad91c48bc61a8e7c8296f9dba"
-    }
+    },
+    "owner": "javiersantiago"
   }
 }
